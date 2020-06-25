@@ -10,22 +10,6 @@ import UIKit
 
 class PhotoStreamViewController: UICollectionViewController {
   
-  var colors: [UIColor] {
-    get {
-        var colors = [UIColor]()
-        let palette = [UIColor.red, UIColor.green, UIColor.blue, UIColor.orange, UIColor.purple, UIColor.yellow]
-        var paletteIndex = 0
-        for i in 0..<photos.count {
-            colors.append(palette[paletteIndex])
-            if paletteIndex == (palette.count - 1) {
-                paletteIndex = 0
-            } else {
-                paletteIndex += 1
-            }
-        }
-        return colors
-    }
-    }
   var photos = Photo.allPhotos()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -58,17 +42,21 @@ extension PhotoStreamViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnnotatedPhotoCell", for: indexPath) as UICollectionViewCell
-        cell.contentView.backgroundColor = colors[indexPath.item]
+        
         return cell
     }
   
 }
 
 extension PhotoStreamViewController: PinterestLayoutDelegate {
-    func collectionView(_ collectionView: UICollectionView, heightForItemAtIndexPath indexPath: IndexPath) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath, withWidth width: CGFloat) -> CGFloat {
         // arc4random_uniform(4)
         // [0...3]
         let random = arc4random_uniform(4) + 1
         return CGFloat(random * 100)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, heightForAnnotationAtIndexPath indexPath: IndexPath, withWidth width: CGFloat) -> CGFloat {
+        return 60
     }
 }

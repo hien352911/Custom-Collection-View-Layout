@@ -21,4 +21,9 @@ class AnnotatedPhotoCell: UICollectionViewCell {
     }
   }
   
+    override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
+        super.apply(layoutAttributes)
+        let attributes = layoutAttributes as! PinterestLayoutAttributes
+        imageViewHeightLayoutConstraint.constant = attributes.photoHeight
+    }
 }
