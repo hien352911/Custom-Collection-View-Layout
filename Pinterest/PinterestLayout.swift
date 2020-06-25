@@ -56,8 +56,10 @@ class PinterestLayout: UICollectionViewLayout {
                                    y: yOffsets[column],
                                    width: columnWidth,
                                    height: height)
-                // frame.x + dx
-                // frame.y + dy
+                // insetFrame.x = frame.x + dx
+                // insetFrame.width = frame.width - dx * 2
+                // insetFrame.height = frame.height - dy * 2
+                // insetFrame.y = frame.y + dy
                 let insetFrame = frame.insetBy(dx: cellPadding, dy: cellPadding)
                 let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
                 
