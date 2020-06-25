@@ -56,8 +56,9 @@ extension PhotoStreamViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnnotatedPhotoCell", for: indexPath) as UICollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IndexCollectionViewCell", for: indexPath) as! IndexCollectionViewCell
         cell.contentView.backgroundColor = colors[indexPath.item]
+        cell.label.text = "\(indexPath.row)"
         return cell
     }
   

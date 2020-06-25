@@ -19,6 +19,7 @@
 		7B0AC7F01AAEFCA500885D4A /* UIImage+Decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AC7EF1AAEFCA500885D4A /* UIImage+Decompression.swift */; };
 		7B0AC7F21AAEFD0400885D4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B0AC7F11AAEFD0400885D4A /* Images.xcassets */; };
 		8B63AD6924A48F25009F26AA /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B63AD6824A48F25009F26AA /* PinterestLayout.swift */; };
+		8B63AD6B24A494FB009F26AA /* IndexCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B63AD6A24A494FB009F26AA /* IndexCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		7B0AC7EF1AAEFCA500885D4A /* UIImage+Decompression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Decompression.swift"; sourceTree = "<group>"; };
 		7B0AC7F11AAEFD0400885D4A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8B63AD6824A48F25009F26AA /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		8B63AD6A24A494FB009F26AA /* IndexCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			children = (
 				7B0AC7EB1AAEFC0B00885D4A /* AnnotatedPhotoCell.swift */,
 				7B0AC7E91AAEFBD900885D4A /* RoundedCornersView.swift */,
+				8B63AD6A24A494FB009F26AA /* IndexCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				7B0AC7EA1AAEFBD900885D4A /* RoundedCornersView.swift in Sources */,
 				7B0AC7EC1AAEFC0B00885D4A /* AnnotatedPhotoCell.swift in Sources */,
 				7B0AC7EE1AAEFC3400885D4A /* Photo.swift in Sources */,
+				8B63AD6B24A494FB009F26AA /* IndexCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
