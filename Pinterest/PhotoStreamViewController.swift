@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PhotoStreamViewController: UICollectionViewController {
   
@@ -41,7 +42,9 @@ extension PhotoStreamViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnnotatedPhotoCell", for: indexPath) as UICollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnnotatedPhotoCell", for: indexPath) as! AnnotatedPhotoCell
+        
+        cell.photo = photos[indexPath.item]
         
         return cell
     }
@@ -50,10 +53,14 @@ extension PhotoStreamViewController {
 
 extension PhotoStreamViewController: PinterestLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath, withWidth width: CGFloat) -> CGFloat {
-        // arc4random_uniform(4)
-        // [0...3]
-        let random = arc4random_uniform(4) + 1
-        return CGFloat(random * 100)
+        let photo = photos[indexPath.row]
+        let boundingRect = CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT))
+        // Func generate rect with ratio
+        // Dùng tay tính cũng được
+        // ratio = photo.image.size.width / photo.image.size.height
+        // rect.height = width / ratio
+        let rect = AVMakeRect(aspectRatio: photo.image.size, insideRect: boundingRect)
+        return rect.height
     }
     
     func collectionView(_ collectionView: UICollectionView, heightForAnnotationAtIndexPath indexPath: IndexPath, withWidth width: CGFloat) -> CGFloat {
