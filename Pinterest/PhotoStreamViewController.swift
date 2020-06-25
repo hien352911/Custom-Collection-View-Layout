@@ -40,9 +40,10 @@ class PhotoStreamViewController: UICollectionViewController {
     }
     
     collectionView!.backgroundColor = UIColor.clear
-    let size = collectionView!.bounds.width / 2
-    let layout = collectionViewLayout as! UICollectionViewFlowLayout
-    layout.itemSize = CGSize(width: size, height: size)
+    
+    let layout = PinterestLayout()
+    layout.delegate = self
+    collectionView.collectionViewLayout = layout
   }
   
 }
@@ -59,4 +60,10 @@ extension PhotoStreamViewController {
         return cell
     }
   
+}
+
+extension PhotoStreamViewController: PinterestLayoutDelegate {
+    func collectionView(_ collectionView: UICollectionView, heightForItemAtIndexPath indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 }
