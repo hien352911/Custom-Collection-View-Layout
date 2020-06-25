@@ -40,6 +40,7 @@ class PhotoStreamViewController: UICollectionViewController {
     }
     
     collectionView!.backgroundColor = UIColor.clear
+    collectionView!.contentInset = UIEdgeInsets(top: 23, left: 5, bottom: 10, right: 5)
     
     let layout = PinterestLayout()
     layout.delegate = self

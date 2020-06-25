@@ -21,7 +21,8 @@ class PinterestLayout: UICollectionViewLayout {
     private var contentHeight: CGFloat = 0
     private var width: CGFloat {
         get {
-            return collectionView!.bounds.width
+            let insets = collectionView!.contentInset
+            return collectionView!.bounds.width - (insets.left + insets.right)
         }
     }
     
