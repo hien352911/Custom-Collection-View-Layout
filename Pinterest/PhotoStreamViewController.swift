@@ -72,7 +72,8 @@ extension PhotoStreamViewController: PinterestLayoutDelegate {
         let font = UIFont(name: "AvenirNext-Regular", size: 10)!
         
         // 3
-        let commentHeight = photo.heightForComment(font: font, width: width)
+        let widthCommentDisplay = width - 4 - 4
+        let commentHeight = photo.heightForComment(font: font, width: widthCommentDisplay)
         
         // 4
         let height = 4 + 17 + 4 + commentHeight + 4
