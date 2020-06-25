@@ -19,6 +19,11 @@
 		7B0AC7F01AAEFCA500885D4A /* UIImage+Decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AC7EF1AAEFCA500885D4A /* UIImage+Decompression.swift */; };
 		7B0AC7F21AAEFD0400885D4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B0AC7F11AAEFD0400885D4A /* Images.xcassets */; };
 		8B63AD6924A48F25009F26AA /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B63AD6824A48F25009F26AA /* PinterestLayout.swift */; };
+		8B63AD6F24A4AE50009F26AA /* CCVL01-LectureSlides.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8B63AD6E24A4AE50009F26AA /* CCVL01-LectureSlides.pdf */; };
+		8B63AD7124A4AE5C009F26AA /* Custom Collection View Layouts Challenge A.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8B63AD7024A4AE5C009F26AA /* Custom Collection View Layouts Challenge A.pdf */; };
+		8B63AD7424A4AE90009F26AA /* CCVL02-Pinterest-Layout-Attributes-LectureSlides.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8B63AD7324A4AE90009F26AA /* CCVL02-Pinterest-Layout-Attributes-LectureSlides.pdf */; };
+		8B63AD7724A4AEBB009F26AA /* CCVL03-Pinterest-Cell-Content-LectureSlides.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8B63AD7624A4AEBB009F26AA /* CCVL03-Pinterest-Cell-Content-LectureSlides.pdf */; };
+		8B63AD7924A4AEC2009F26AA /* CCVL03-Pinterest-Cell-Content-ChallengeB.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8B63AD7824A4AEC2009F26AA /* CCVL03-Pinterest-Cell-Content-ChallengeB.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		7B0AC7EF1AAEFCA500885D4A /* UIImage+Decompression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Decompression.swift"; sourceTree = "<group>"; };
 		7B0AC7F11AAEFD0400885D4A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8B63AD6824A48F25009F26AA /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		8B63AD6E24A4AE50009F26AA /* CCVL01-LectureSlides.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "CCVL01-LectureSlides.pdf"; sourceTree = "<group>"; };
+		8B63AD7024A4AE5C009F26AA /* Custom Collection View Layouts Challenge A.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Custom Collection View Layouts Challenge A.pdf"; sourceTree = "<group>"; };
+		8B63AD7324A4AE90009F26AA /* CCVL02-Pinterest-Layout-Attributes-LectureSlides.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "CCVL02-Pinterest-Layout-Attributes-LectureSlides.pdf"; sourceTree = "<group>"; };
+		8B63AD7624A4AEBB009F26AA /* CCVL03-Pinterest-Cell-Content-LectureSlides.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "CCVL03-Pinterest-Cell-Content-LectureSlides.pdf"; sourceTree = "<group>"; };
+		8B63AD7824A4AEC2009F26AA /* CCVL03-Pinterest-Cell-Content-ChallengeB.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "CCVL03-Pinterest-Cell-Content-ChallengeB.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,7 @@
 		7B0AC7B81AAEF90000885D4A /* Pinterest */ = {
 			isa = PBXGroup;
 			children = (
+				8B63AD6C24A4AE2C009F26AA /* Document */,
 				7B0AC7DB1AAEF99600885D4A /* Assets */,
 				7B0AC7DC1AAEF9A500885D4A /* Controllers */,
 				7B0AC7DD1AAEF9AC00885D4A /* Extensions */,
@@ -157,6 +168,42 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		8B63AD6C24A4AE2C009F26AA /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				8B63AD7524A4AE97009F26AA /* 4.Cell Content */,
+				8B63AD7224A4AE6D009F26AA /* 3.Layout Attributes */,
+				8B63AD6D24A4AE33009F26AA /* 2.Basic Layout */,
+			);
+			name = Document;
+			sourceTree = "<group>";
+		};
+		8B63AD6D24A4AE33009F26AA /* 2.Basic Layout */ = {
+			isa = PBXGroup;
+			children = (
+				8B63AD6E24A4AE50009F26AA /* CCVL01-LectureSlides.pdf */,
+				8B63AD7024A4AE5C009F26AA /* Custom Collection View Layouts Challenge A.pdf */,
+			);
+			name = "2.Basic Layout";
+			sourceTree = "<group>";
+		};
+		8B63AD7224A4AE6D009F26AA /* 3.Layout Attributes */ = {
+			isa = PBXGroup;
+			children = (
+				8B63AD7324A4AE90009F26AA /* CCVL02-Pinterest-Layout-Attributes-LectureSlides.pdf */,
+			);
+			name = "3.Layout Attributes";
+			sourceTree = "<group>";
+		};
+		8B63AD7524A4AE97009F26AA /* 4.Cell Content */ = {
+			isa = PBXGroup;
+			children = (
+				8B63AD7624A4AEBB009F26AA /* CCVL03-Pinterest-Cell-Content-LectureSlides.pdf */,
+				8B63AD7824A4AEC2009F26AA /* CCVL03-Pinterest-Cell-Content-ChallengeB.pdf */,
+			);
+			name = "4.Cell Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,9 +262,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B63AD6F24A4AE50009F26AA /* CCVL01-LectureSlides.pdf in Resources */,
+				8B63AD7924A4AEC2009F26AA /* CCVL03-Pinterest-Cell-Content-ChallengeB.pdf in Resources */,
+				8B63AD7724A4AEBB009F26AA /* CCVL03-Pinterest-Cell-Content-LectureSlides.pdf in Resources */,
+				8B63AD7124A4AE5C009F26AA /* Custom Collection View Layouts Challenge A.pdf in Resources */,
 				7B0AC7C11AAEF90000885D4A /* Main.storyboard in Resources */,
 				7B0AC7F21AAEFD0400885D4A /* Images.xcassets in Resources */,
 				7B0AC7C61AAEF90000885D4A /* LaunchScreen.xib in Resources */,
+				8B63AD7424A4AE90009F26AA /* CCVL02-Pinterest-Layout-Attributes-LectureSlides.pdf in Resources */,
 				7B0AC7E81AAEFAA900885D4A /* Photos.xcassets in Resources */,
 				7B0AC7E71AAEFAA900885D4A /* Photos.plist in Resources */,
 			);
