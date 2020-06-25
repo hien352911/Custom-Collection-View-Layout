@@ -23,28 +23,34 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AnnotatedPhotoCell" id="YvZ-ba-bjz" customClass="AnnotatedPhotoCell" customModule="Pinterest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="192" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="192" height="300"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xh7-5q-I3Y" customClass="RoundedCornersView" customModule="Pinterest" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="192" height="300"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vtj-HS-0Cm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="192" height="200"/>
                                                     <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="200" id="D4M-hm-5F9"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNn-PP-bkM">
-                                                    <rect key="frame" x="4" y="204" width="192" height="17"/>
+                                                    <rect key="frame" x="4" y="204" width="184" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="17" id="ov4-x1-db4"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brian and Matt meet for the very first time." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cA-rh-4wV">
+                                                    <rect key="frame" x="4" y="225" width="184" height="27.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -54,9 +60,12 @@
                                                 <constraint firstAttribute="trailing" secondItem="nNn-PP-bkM" secondAttribute="trailing" constant="4" id="6Wm-XV-KlM"/>
                                                 <constraint firstItem="Vtj-HS-0Cm" firstAttribute="top" secondItem="Xh7-5q-I3Y" secondAttribute="top" id="HMC-Fo-3D2"/>
                                                 <constraint firstAttribute="trailing" secondItem="Vtj-HS-0Cm" secondAttribute="trailing" id="M3h-tk-wYT"/>
+                                                <constraint firstItem="0cA-rh-4wV" firstAttribute="leading" secondItem="Xh7-5q-I3Y" secondAttribute="leading" constant="4" id="ShU-TA-gQd"/>
                                                 <constraint firstItem="nNn-PP-bkM" firstAttribute="top" secondItem="Vtj-HS-0Cm" secondAttribute="bottom" constant="4" id="Tuc-d6-ZNf"/>
+                                                <constraint firstAttribute="trailing" secondItem="0cA-rh-4wV" secondAttribute="trailing" constant="4" id="Z6w-Ja-Iy6"/>
                                                 <constraint firstItem="Vtj-HS-0Cm" firstAttribute="leading" secondItem="Xh7-5q-I3Y" secondAttribute="leading" id="bAl-G7-3j9"/>
                                                 <constraint firstItem="nNn-PP-bkM" firstAttribute="leading" secondItem="Xh7-5q-I3Y" secondAttribute="leading" constant="4" id="g8N-ZV-uSq"/>
+                                                <constraint firstItem="0cA-rh-4wV" firstAttribute="top" secondItem="nNn-PP-bkM" secondAttribute="bottom" constant="4" id="ust-vN-ncQ"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -72,9 +81,10 @@
                                     <constraint firstAttribute="bottom" secondItem="Xh7-5q-I3Y" secondAttribute="bottom" id="bcZ-aU-bcb"/>
                                     <constraint firstAttribute="trailing" secondItem="Xh7-5q-I3Y" secondAttribute="trailing" id="zNQ-6b-Arh"/>
                                 </constraints>
-                                <size key="customSize" width="200" height="300"/>
+                                <size key="customSize" width="192" height="300"/>
                                 <connections>
                                     <outlet property="captionLabel" destination="nNn-PP-bkM" id="Rze-h9-4bi"/>
+                                    <outlet property="commentLabel" destination="0cA-rh-4wV" id="avN-n1-vYV"/>
                                     <outlet property="imageView" destination="Vtj-HS-0Cm" id="SEk-Df-ank"/>
                                     <outlet property="imageViewHeightLayoutConstraint" destination="D4M-hm-5F9" id="RQM-Dx-p01"/>
                                 </connections>
@@ -88,7 +98,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNh-dI-6Sx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="512" y="381"/>
+            <point key="canvasLocation" x="511.59420289855075" y="380.35714285714283"/>
         </scene>
     </scenes>
 </document>
