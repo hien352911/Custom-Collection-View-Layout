@@ -16,6 +16,7 @@ class PinterestLayout: UICollectionViewLayout {
     
     var delegate: PinterestLayoutDelegate!
     var numberOfColumns = 1 // số cột
+    var cellPadding: CGFloat = 5
     
     private var cache = [UICollectionViewLayoutAttributes]()
     private var contentHeight: CGFloat = 0
@@ -55,9 +56,12 @@ class PinterestLayout: UICollectionViewLayout {
                                    y: yOffsets[column],
                                    width: columnWidth,
                                    height: height)
+                // frame.x + dx
+                // frame.y + dy
+                let insetFrame = frame.insetBy(dx: cellPadding, dy: cellPadding)
                 let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
                 
-                attributes.frame = frame
+                attributes.frame = insetFrame
                 cache.append(attributes)
                 
                 // Tính contentSize của collectionView
