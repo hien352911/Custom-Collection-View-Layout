@@ -50,10 +50,17 @@ class PinterestLayout: UICollectionViewLayout {
                 let height = delegate.collectionView(collectionView!, heightForItemAtIndexPath: indexPath)
                 
                 // Tính frame của mỗi cell
-                let frame = CGRect(x: xOffsets[column],
-                                   y: yOffsets[column],
+                column = findIndexOfMinValue(array: yOffsets)!
+                
+                let x = xOffsets[column]
+                
+                let y = yOffsets[column]
+                
+                let frame = CGRect(x: x,
+                                   y: y,
                                    width: columnWidth,
                                    height: height)
+                
                 let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
                 
                 attributes.frame = frame
@@ -89,4 +96,23 @@ class PinterestLayout: UICollectionViewLayout {
         }
         return layoutAttributes
     }
+}
+
+func findIndexOfMinValue(array: [CGFloat]) -> Int? {
+    if array.count == 0 {
+        return nil
+    }
+
+    if array.count == 1 {
+        return 0
+    }
+
+    var minIndex = 0
+    for i in 1..<array.count {
+        if array[i] < array[minIndex] {
+            minIndex = i
+        }
+    }
+
+    return minIndex
 }

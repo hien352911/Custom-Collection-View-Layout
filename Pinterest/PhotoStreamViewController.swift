@@ -68,7 +68,14 @@ extension PhotoStreamViewController: PinterestLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForItemAtIndexPath indexPath: IndexPath) -> CGFloat {
         // arc4random_uniform(4)
         // [0...3]
-        let random = arc4random_uniform(4) + 1
+        let random: CGFloat
+        
+        if indexPath.row % 2 == 0 {
+            random = 2
+        } else {
+            random = 3
+        }
+        
         return CGFloat(random * 100)
     }
 }
