@@ -39,12 +39,24 @@
                                                         <constraint firstAttribute="height" constant="200" id="D4M-hm-5F9"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNn-PP-bkM">
+                                                    <rect key="frame" x="4" y="204" width="192" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="17" id="ov4-x1-db4"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="nNn-PP-bkM" secondAttribute="trailing" constant="4" id="6Wm-XV-KlM"/>
                                                 <constraint firstItem="Vtj-HS-0Cm" firstAttribute="top" secondItem="Xh7-5q-I3Y" secondAttribute="top" id="HMC-Fo-3D2"/>
                                                 <constraint firstAttribute="trailing" secondItem="Vtj-HS-0Cm" secondAttribute="trailing" id="M3h-tk-wYT"/>
+                                                <constraint firstItem="nNn-PP-bkM" firstAttribute="top" secondItem="Vtj-HS-0Cm" secondAttribute="bottom" constant="4" id="Tuc-d6-ZNf"/>
                                                 <constraint firstItem="Vtj-HS-0Cm" firstAttribute="leading" secondItem="Xh7-5q-I3Y" secondAttribute="leading" id="bAl-G7-3j9"/>
+                                                <constraint firstItem="nNn-PP-bkM" firstAttribute="leading" secondItem="Xh7-5q-I3Y" secondAttribute="leading" constant="4" id="g8N-ZV-uSq"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -62,6 +74,7 @@
                                 </constraints>
                                 <size key="customSize" width="200" height="300"/>
                                 <connections>
+                                    <outlet property="captionLabel" destination="nNn-PP-bkM" id="Rze-h9-4bi"/>
                                     <outlet property="imageView" destination="Vtj-HS-0Cm" id="SEk-Df-ank"/>
                                     <outlet property="imageViewHeightLayoutConstraint" destination="D4M-hm-5F9" id="RQM-Dx-p01"/>
                                 </connections>
